@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="myApp">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *"/>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+        <title></title>
+ 
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/styles1.css">
+ 
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+ 
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="js/ng-cordova.min.js"></script>
+            
+        <script src="cordova.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+        <!-- your app's js -->
+        <script src="js/app1.js"></script>
+    </head>
+    <body>
+ 
+    <ion-pane>
+      <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title">Administrator</h1>
+      </ion-header-bar>
+      <ion-content class="padding" ng-controller="RegisterCtrl">
+          <h2>Admin</h2>
+          <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input type="text" ng-model="uname" placeholder="Username"></label>
+          <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="pword" placeholder="Password"></label>    
+          <a id="btn" class="button button-block button-dark" ng-click="removeUser(uname, pword)">Remove</a>
+          <div><a href="LoginHome.html" class="button button-block button-dark">Home</a></div>
+            <span data-ng-bind="displayRMsg"></span><br>
+      </ion-content>
+    </ion-pane>  
+    </body>
+</html>

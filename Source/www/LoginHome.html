@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Login Form</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>  
+    <script src="js/app3.js"></script>
+
+    <link href="http://code.ionicframework.com/1.0.0-rc.5/css/ionic.css" rel="stylesheet">
+    <link href="css/styles1.css" rel="stylesheet">
+
+    <script src="http://code.ionicframework.com/1.0.0-rc.5/js/ionic.bundle.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+	<script src="lib/ngCordova/dist/ng-cordova.js"> </script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Login page</title>
+</head>
+
+<body>
+
+	
+	<ion-pane>
+		<ion-header-bar class="bar bar-header bar-dark">
+				<h1 class="title">LOGIN PAGE</h1>
+		</ion-header-bar>
+		<ion-content class="padding" ng-app="apiApp" ng-controller="apiController">
+			<div class="row">
+
+				<div class="col">
+					<div class="card">
+						<label class="item item-input">
+					<input type="text" ng-model="userName" placeholder="User Name" id="userName">
+				</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+
+				<div class="col">
+					<div class="card">
+						<label class="item item-input">
+					<input type="password" ng-model="userPassword" placeholder="Password" id="userPassword">
+				</label>
+					</div>
+				</div>
+			</div>
+			
+			<form name="loginForm" method="post" action="index.html">
+			<div align="center">
+				<div class="row">
+					<div class="col">
+					 <button type="submit" class="button button-block button-dark">Login</button> 
+					</div>
+					
+					<div class="col">
+					 <input type="reset" class="button button-block button-dark"/>
+					</div>
+				</div>
+			</div>
+			</form>
+			<form name="registerForm" method="post" action="register.html">
+			<div align="center">
+				 <button type="submit" class="button button-block button-dark">Register</button>
+			</div>
+			</form>
+			<form name="chngPasswordForm" method="post" action="ChangePassword.html">
+			<div align="center">
+				 <button type="submit" class="button button-block button-dark">Change Password</button>
+			</div>
+			</form>
+			<form name="adminForm" method="post" action="Admin.html">
+			<div align="center">
+				 <button type="submit" class="button button-block button-dark">Admin</button>
+			</div>
+			</form>
+			
+		</ion-content>
+	</ion-pane>
+			
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *"/>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+        <title></title>
+ 
+        <link href="lib/ionic/css/ionic.css" rel="stylesheet"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/styles1.css">
+ 
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+ 
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="js/ng-cordova.min.js"></script>
+        <script src="js/jquery.facedetection.min.js"></script>    
+        <script src="cordova.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+        <!-- your app's js -->
+        <script src="js/app.js"></script>
+        <script src="js/app2.js"></script>
+    </head>
+    <body ng-app="starter">
+ 
+        <ion-pane class="index">
+            <ion-header-bar class="bar bar-header bar-dark" align-title="center">
+                <h1 class="title">FaceComm</h1>
+            </ion-header-bar>
+        </ion-pane>
+        <ion-pane class="index" class="has-subheader">
+            <ion-content ng-controller="ImagePickerController" scroll="true" has-bouncing="true" padding="true">                
+                <a id="try-it" href="#">
+                    <img class="button-try" src="img/tryit.svg">
+                </a>
+                <button class="button button-full button-positive" ng-click="getImageSaveContact()">
+                    Get Images <i class="icon ion-android-image"></i>
+                </button>
+                <img ng-src="{{collection.selectedImage}}" id="picture" style="width:100%; height: auto;"/>
+                
+            </ion-content>
+        </ion-pane>
+ 
+    </body>
+</html>
